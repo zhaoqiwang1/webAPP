@@ -21,10 +21,6 @@ router.post('/', async (req, res) => {
   try {
     // Saving the author and awaiting the result
     const newAuthor = await author.save();
-    // everything in Mongoose and MongoDB is done asynchronously so we need to use
-    // await in order to wait for that asynchronous call to be completed.
-
-    // Redirecting to the authors page (or wherever you want)
     res.redirect('authors');
 } catch (err) {
     // Handling errors if any occur during the save

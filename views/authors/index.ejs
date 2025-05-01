@@ -2,4 +2,10 @@
 <br>
 这里是第一阶段需要回答的问题。
 <br>
+<form action="/authors" method="POST">
+  <%- include('_form_fields') %>
+  <a href="/authors">Cancel</a>
+  <button type="submit">Create</button>
+</form>
+<br>
 <a href="/authors/new">Add Author（到第二阶段）</a>

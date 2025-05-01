@@ -5,13 +5,9 @@ const Author = require('../models/author')
 
 // All Authors Route
 router.get('/', (req, res) => {
-  res.render('authors/index')
+  res.render('authors/index', { author: new Author() })
 })
 
-// New Author Route
-router.get('/new', (req, res) => {
-  res.render('authors/new', { author: new Author() })
-})
 
 // Create Author Route
 router.post('/', async (req, res) => {
@@ -24,12 +20,16 @@ router.post('/', async (req, res) => {
     res.redirect('authors');
 } catch (err) {
     // Handling errors if any occur during the save
-    res.render('authors/new', {
+    res.render('authors/index', {
         author: author,
         errorMessage: 'Error Creating Author'
     });
 }
 })
 
+// New Author Route
+router.get('/new', (req, res) => {
+  res.render('authors/new')
+})
 
 module.exports = router

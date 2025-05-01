@@ -12,7 +12,8 @@ router.get('/', (req, res) => {
 // Create Author Route
 router.post('/', async (req, res) => {
   const author = new Author({
-    name: req.body.name
+    name: req.body.name,
+    playerId: parseInt(req.body.playerId)
   })
   try {
     // Saving the author and awaiting the result

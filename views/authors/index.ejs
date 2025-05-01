@@ -1,11 +1,13 @@
-这里是第一阶段需要看到的东西
-<br>
-这里是第一阶段需要回答的问题。
-<br>
+<h2>这是第一阶段</h2>
+首先让被试者填写自己的玩家ID:
 <form action="/authors" method="POST">
-  <%- include('_form_fields') %>
+  <%- include('_form_fields',{ author: author }) %>
   <a href="/authors">Cancel</a>
   <button type="submit">Create</button>
 </form>
-<br>
+<hr>
+这里是第一阶段需要看到的东西
+<hr>
+这里是第一阶段需要回答的问题。
+<hr>
 <a href="/authors/new">Add Author（到第二阶段）</a>

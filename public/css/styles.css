@@ -1,0 +1,14 @@
+.grid-container {
+  display: grid;
+  /* 创建四列，每列宽度平均分配剩余空间 */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* 设置网格项之间的间距 */
+}
+
+/* 定义网格项样式 */
+.grid-item {
+  background-color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}

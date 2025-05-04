@@ -5,9 +5,11 @@ const Author = require('../models/author')
 
 // Phase1 Route
 router.get('/', (req, res) => {
-  res.render('phases/index', { author: new Author() })
+  res.render('phases/index', { 
+    // needGridLayout: true,
+    author: new Author() 
+  })
 })
-
 
 // Phase1 Collect Answers Route
 router.post('/', async (req, res) => {

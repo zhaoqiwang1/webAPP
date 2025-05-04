@@ -3,13 +3,13 @@ const router = express.Router()
 const Author = require('../models/author')
 
 
-// All Authors Route
+// Phase1 Route
 router.get('/', (req, res) => {
   res.render('phases/index', { author: new Author() })
 })
 
 
-// Create Author Route
+// Phase1 Collect Answers Route
 router.post('/', async (req, res) => {
   const author = new Author({
     name: req.body.name,
@@ -28,9 +28,31 @@ router.post('/', async (req, res) => {
 }
 })
 
-// New Author Route
+// Phase2 Route
 router.get('/phase2', (req, res) => {
   res.render('phases/phase2')
 })
 
+// Phase2 Collect Answers Route
+
+// Phase3_intro Route
+router.get('/phase3_intro', (req, res) => {
+  res.render('phases/phase3_intro')
+})
+
+// Phase3_repQ Route
+router.get('/phase3_repQ', (req, res) => {
+  res.render('phases/phase3_repQ')
+})
+
+// Phase3_repQ Collect Answers Route
+
+// Phase3_newQ Route
+router.get('/phase3_newQ', (req, res) => {
+  res.render('phases/phase3_newQ')
+})
+
+// Phase3_newQ Collect Answers Route
+
+// export routes
 module.exports = router

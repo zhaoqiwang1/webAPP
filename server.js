@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 
 
 const indexRouter = require('./routes/index')
-const authorRouter = require('./routes/authors')
+const phaseRouter = require('./routes/phases')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -27,7 +27,7 @@ db.once('open', () => console.log('Connected to Mongoose'))
 
 
 app.use('/', indexRouter)
-app.use('/authors', authorRouter)
+app.use('/phases', phaseRouter)
 
 
 

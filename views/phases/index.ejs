@@ -1,8 +1,8 @@
 <h2>这是第一阶段</h2>
 首先让被试者填写自己的玩家ID:
-<form action="/authors" method="POST">
+<form action="/phases" method="POST">
   <%- include('_form_fields',{ author: author }) %>
-  <a href="/authors">Cancel</a>
+  <a href="/phases">Cancel</a>
   <button type="submit">Create</button>
 </form>
 <hr>
@@ -10,4 +10,4 @@
 <hr>
 这里是第一阶段需要回答的问题。
 <hr>
-<a href="/authors/new">Add Author（到第二阶段）</a>
+<a href="/phases/phase2">点击进入第二阶段</a>

@@ -6,7 +6,7 @@ const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
-
+const session = require('express-session');
 
 const indexRouter = require('./routes/index')
 const phaseRouter = require('./routes/phases')
@@ -17,7 +17,11 @@ app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}))
-
+app.use(session({
+  secret: 'yourSecretKey',
+  resave: false,
+  saveUninitialized: true
+}));
 
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL)

@@ -17,8 +17,7 @@ const authorSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: () => new Date(Date.now() + 8 * 60 * 60 * 1000)
-    // default: Date.now
-  }
+  },
 })
 
 module.exports = mongoose.model('Author', authorSchema, 'reportedAnswers')

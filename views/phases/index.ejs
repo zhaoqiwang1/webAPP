@@ -1,37 +1,9 @@
-<h2>这是第一阶段</h2>
+<h2>在这里填写玩家ID</h2>
 首先让被试者填写自己的玩家ID:
-<form action="/phases" method="POST">
+<form action="/phases" id="createIdForm" method="POST">
   <%- include('_form_fields',{ author: author }) %>
   <a href="/phases">Cancel</a>
-  <button type="submit">Create</button>
+  <button type="submit" id="idCreateButton">Create</button>
 </form>
-<!-- 网格容器 -->
-<div class="grid-container">
-  <!-- 第一个网格项 -->
-  <div class="grid-item1">
-      <h3>Column 1</h3>
-      <p>Some content for column 1.</p>
-      <button id="item1Button">Next</button>
-  </div>
-  <!-- 第二个网格项 -->
-  <div class="grid-item2">
-      <h3>Column 2</h3>
-      <p>Some content for column 2.</p>
-      <button id="item2Button">Next</button>
-  </div>
-  <!-- 第三个网格项 -->
-  <div class="grid-item3">
-      <h3>Column 3</h3>
-      <p>Some content for column 3.</p>
-      <button id="item3Button">Next</button>
-  </div>
-  <!-- 第四个网格项 -->
-  <div class="grid-item4">
-      <h3>Column 4</h3>
-      <p>Some content for column 4.</p>
-      <button id="item4Button">Next</button>
-  </div>
-</div>
 <hr>
-<a href="/phases/phase2">点击进入第二阶段</a>
-<script type="module" src="js/phase1.js"></script>
+<a href="/phases/phase1">点击进入第一阶段</a>

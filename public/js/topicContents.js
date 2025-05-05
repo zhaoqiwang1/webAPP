@@ -1,12 +1,28 @@
-export const topicsTitle = ["culture", "technology", "economics", "societal"];
+export const topicsTitle = ["文化", "科技", "经济", "社会"];
 
-const cultureTopicContent = "一大段关于文化的文字";
-const technologyTopicContent = "一大段关于科技的文字";
-const economicsTopicContent = "一大段关于经济的文字";
-const societalTopicContent = "一大段关于社会的文字";
 export const topicsContent = [
-    cultureTopicContent,technologyTopicContent,economicsTopicContent,societalTopicContent
-]
+  {
+    TopicIntro: "一段关于文化话题的介绍",
+    TopicPro: "文化话题的正面介绍",
+    TopicCon: "文化话题的负面介绍"
+  },
+  {
+    TopicIntro: "一段关于科技话题的介绍",
+    TopicPro: "科技话题的正面介绍",
+    TopicCon: "科技话题的负面介绍"
+  },
+  {
+    TopicIntro: "一段关于经济话题的介绍",
+    TopicPro: "经济话题的正面介绍",
+    TopicCon: "经济话题的负面介绍"
+  },
+  {
+    TopicIntro: "一段关于社会话题的介绍",
+    TopicPro: "社会话题的正面介绍",
+    TopicCon: "社会话题的负面介绍"
+  }
+];
+
 
 export const topicArguments = [
   {

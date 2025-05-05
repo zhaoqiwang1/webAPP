@@ -21,7 +21,6 @@ router.post('/', async (req, res) => {
   try {
     const newPlayer = await player.save();
     req.session.playerId = newPlayer._id; // 保存 MongoDB 生成的 _id
-    // req.session.playerId = newAuthor.playerId; // Store playerId in session
     res.redirect('phases');
 } catch (err) {
     console.error(err); 

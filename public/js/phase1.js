@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[0]].TopicIntro}</p>
         <p>${topic1ProCon1st}</p>
         <p>${topic1ProCon2nd}</p>
+        <p>P1T1Q1</p>
+        <label><input type="radio" name="P1T1Q1" value="A" required> A</label>
+        <label><input type="radio" name="P1T1Q1" value="B"> B</label>
         <button id="item1Button">Next</button>
     </div>
     <!-- 第二个网格项 -->
@@ -66,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[1]].TopicIntro}</p>
         <p>${topic2ProCon1st}</p>
         <p>${topic2ProCon2nd}</p>
+        <p>P1T1Q2</p>
+        <label><input type="radio" name="P1T1Q2" value="A" required> A</label>
+        <label><input type="radio" name="P1T1Q2" value="B"> B</label>
         <button id="item2Button">Next</button>
     </div>
     <!-- 第三个网格项 -->

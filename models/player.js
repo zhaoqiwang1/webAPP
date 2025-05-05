@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
 
-const authorSchema = new mongoose.Schema({
+const playerSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   playerId: {
     type: Number,
@@ -18,6 +18,7 @@ const authorSchema = new mongoose.Schema({
     type: Date,
     default: () => new Date(Date.now() + 8 * 60 * 60 * 1000)
   },
+  
 })
 
-module.exports = mongoose.model('Author', authorSchema, 'reportedAnswers')
+module.exports = mongoose.model('Player', playerSchema, 'postedAnswers')

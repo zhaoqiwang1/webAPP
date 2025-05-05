@@ -1,9 +1,12 @@
 <h1>这里是第一阶段</h1>
-<h2>Welcome, <%= author.name %>!</h2>
-<p>你的随机玩家ID是: <%= author.playerId %></p>
+<h2>Welcome, <%= player.name %>!</h2>
+<p>你的随机玩家ID是: <%= player.playerId %></p>
 <!-- 网格容器 -->
+<form action="/phase1" method="POST">
 <div class="grid-container" id="phase1-grids">
 </div>
+<button type="submit" id="phase1SubmitButton">提交</button>
+</form>
 <br>
 <a href="/phases/phase2">点击进入第二阶段</a>
 <script type="module" src="../js/phase1.js"></script>

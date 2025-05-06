@@ -205,6 +205,29 @@ router.get('/phase3_newQ', async (req, res) => {
 })
 
 // Phase3_newQ Collect Answers Route
+router.post('/phase3_newQ', async (req, res) => {
+  try {
+    const playerId = req.session.playerId;
+    const player = await Player.findById(playerId);
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
+    // Phase3_newQ Q1:
+    player.P3T1Q1_New = req.body.P3T1Q1_New;
+    player.P3T2Q1_New = req.body.P3T2Q1_New;
+    player.P3T3Q1_New = req.body.P3T3Q1_New;
+    player.P3T4Q1_New = req.body.P3T4Q1_New;
+
+  
+    await player.save();
+
+    res.redirect('/phases/phase3_newQ'); // or whatever your next step is
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Failed to save responses');
+  }
+});
+
 
 // export routes
 module.exports = router

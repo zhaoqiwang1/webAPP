@@ -1,7 +1,20 @@
 import { topicsTitle, topicsContent} from "./topicContents.js";
 
-// console.log("phase2,打乱顺序后的话题顺序:", randomTopicOrder);
-// console.log("phase2,正面负面信息新顺序:", proConOrder);
+// 查看且保证phase1得到的玩家id，玩家回答的Phase1问题的答案能够 pass 到 phase2:
+// Pass player data from EJS to JavaScript directly
+const playerName = "<%= player.name %>";
+const playerId = "<%= player.playerId %>";
+const playerP1T1Q1 = "<%= player.P1T1Q1 %>";
+const playerP1T2Q1 = "<%= player.P1T2Q1 %>";
+const playerP1T3Q1 = "<%= player.P1T3Q1 %>";
+const playerP1T4Q1 = "<%= player.P1T4Q1 %>";
+
+console.log(playerName);
+console.log(playerId);
+console.log(playerP1T1Q1);
+console.log(playerP1T2Q1);
+console.log(playerP1T3Q1);
+console.log(playerP1T4Q1);
 
 // Retrieve from localStorage
 const randomTopicOrder = JSON.parse(localStorage.getItem('randomTopicOrder'));
@@ -53,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[0]].TopicIntro}</p>
         <p>${topic1ProCon1st}</p>
         <p>${topic1ProCon2nd}</p>
+        <p>下面是对应的支持和反对的意见。</p>
         <button type="button" id="item1Button">Next</button>
     </div>
     <!-- 第二个网格项 -->
@@ -61,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[1]].TopicIntro}</p>
         <p>${topic2ProCon1st}</p>
         <p>${topic2ProCon2nd}</p>
+        <p>下面是对应的支持和反对的意见。</p>
         <button type="button" id="item2Button">Next</button>
     </div>
     <!-- 第三个网格项 -->
@@ -69,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[2]].TopicIntro}</p>
         <p>${topic3ProCon1st}</p>
         <p>${topic3ProCon2nd}</p>
+        <p>下面是对应的支持和反对的意见。</p>
         <button type="button" id="item3Button">Next</button>
     </div>
     <!-- 第四个网格项 -->
@@ -77,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[3]].TopicIntro}</p>
         <p>${topic4ProCon1st}</p>
         <p>${topic4ProCon2nd}</p>
+        <p>下面是对应的支持和反对的意见。</p>
         <button type="button" id="item4Button">Next</button>
     </div>
   `;

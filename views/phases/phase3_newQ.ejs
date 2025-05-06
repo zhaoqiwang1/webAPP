@@ -5,3 +5,24 @@
 </p>
 <hr>
 <h3>引入新的偷换概念</h3>
+<br>
+<h2>Welcome, <%= player.name %>!</h2>
+<p>你的随机玩家ID是: <%= player.playerId %></p>
+<p>你上一阶段对第一个话题的态度是: <%= player.P1T1Q1 %></p>
+<p>你上一阶段对第二个话题的态度是: <%= player.P1T2Q1 %></p>
+<p>你上一阶段对第三个话题的态度是: <%= player.P1T3Q1 %></p>
+<p>你上一阶段对第四个话题的态度是: <%= player.P1T4Q1 %></p>
+<br>
+
+<script>
+  // Attach to global window object
+  window.playerData = {
+    name: "<%= player.name %>",
+    playerId: "<%= player.playerId %>",
+    P1T1Q1: "<%= player.P1T1Q1 %>",
+    P1T2Q1: "<%= player.P1T2Q1 %>",
+    P1T3Q1: "<%= player.P1T3Q1 %>",
+    P1T4Q1: "<%= player.P1T4Q1 %>"
+  };
+</script>
+<script type="module" src="../js/phase3_newQ.js"></script>

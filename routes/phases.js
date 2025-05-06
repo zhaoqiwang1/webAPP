@@ -189,8 +189,19 @@ router.post('/phase3_repQ', async (req, res) => {
 
 
 // Phase3_newQ Route
-router.get('/phase3_newQ', (req, res) => {
-  res.render('phases/phase3_newQ')
+router.get('/phase3_newQ', async (req, res) => {
+  try {
+    const player = await Player.findOne({ _id: req.session.playerId }); // Retrieve player by session playerId
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
+    res.render('phases/phase3_newQ', {
+      player: player,  // Pass player object to EJS template
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Error fetching player');
+  }
 })
 
 // Phase3_newQ Collect Answers Route

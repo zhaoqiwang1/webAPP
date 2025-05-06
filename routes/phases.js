@@ -95,6 +95,31 @@ router.get('/phase2', async (req, res) => {
 })
 
 // Phase2 Collect Answers Route
+router.post('/phase2', async (req, res) => {
+  try {
+    const playerId = req.session.playerId;
+    const player = await Player.findById(playerId);
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
+
+    player.P2T1Q1 = req.body.P2T1Q1;
+    player.P2T2Q1 = req.body.P2T2Q1;
+    player.P2T3Q1 = req.body.P2T3Q1;
+    player.P2T4Q1 = req.body.P2T4Q1;
+
+    await player.save();
+
+    res.redirect('/phases/phase2'); // or whatever your next step is
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Failed to save responses');
+  }
+});
+
+
+
+
 
 // Phase3_intro Route
 router.get('/phase3_intro', (req, res) => {

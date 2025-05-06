@@ -164,6 +164,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic1ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics1arg}</p>
+        <label>P2T1Q1:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P2T1Q1-arg1" name="P2T1Q1" value="arg1" required>
+        <label for="P2T1Q1-arg1">第一个</label>
+        <input type="radio" id="P2T1Q1-arg2" name="P2T1Q1" value="arg2">
+        <label for="P2T1Q1-arg2">第二个</label>
+        <br><br>
         <button type="button" id="item1Button">Next</button>
     </div>
     <!-- 第二个网格项 -->
@@ -174,6 +180,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic2ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics2arg}</p>
+        <label>P2T2Q1:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P2T2Q1-arg1" name="P2T2Q1" value="arg1" required>
+        <label for="P2T2Q1-arg1">第一个</label>
+        <input type="radio" id="P2T2Q1-arg2" name="P2T2Q1" value="arg2">
+        <label for="P2T2Q1-arg2">第二个</label>
+        <br><br>
         <button type="button" id="item2Button">Next</button>
     </div>
     <!-- 第三个网格项 -->
@@ -184,6 +196,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic3ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics3arg}</p>
+        <label>P2T3Q1:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P2T3Q1-arg1" name="P2T3Q1" value="arg1" required>
+        <label for="P2T3Q1-arg1">第一个</label>
+        <input type="radio" id="P2T3Q1-arg2" name="P2T3Q1" value="arg2">
+        <label for="P2T3Q1-arg2">第二个</label>
+        <br><br>
         <button type="button" id="item3Button">Next</button>
     </div>
     <!-- 第四个网格项 -->
@@ -194,6 +212,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic4ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics4arg}</p>
+        <label>P2T4Q1:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P2T4Q1-arg1" name="P2T4Q1" value="arg1" required>
+        <label for="P2T4Q1-arg1">第一个</label>
+        <input type="radio" id="P2T4Q1-arg2" name="P2T4Q1" value="arg2">
+        <label for="P2T4Q1-arg2">第二个</label>
+        <br><br>
         <button type="button" id="item4Button">Next</button>
     </div>
   `;

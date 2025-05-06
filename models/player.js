@@ -128,6 +128,50 @@ const playerSchema = new mongoose.Schema({
     default: null
   },
 
+  // phase3_Rep Q2 (evaluation of arg1):
+  P3T1Q2_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T2Q2_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T3Q2_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T4Q2_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+
+    // phase3_Rep Q3 (evaluation of arg2):
+    P3T1Q3_Rep: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
+    P3T2Q3_Rep: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
+    P3T3Q3_Rep: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
+    P3T4Q3_Rep: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
+
   // created time for data:
   createdAt: {
     type: Date,

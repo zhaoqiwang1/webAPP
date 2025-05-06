@@ -163,6 +163,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic1ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics1arg}</p>
+        <label>P3T1Q1_Rep:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P3T1Q1_Rep-arg1" name="P3T1Q1_Rep" value="arg1" required>
+        <label for="P3T1Q1_Rep-arg1">第一个</label>
+        <input type="radio" id="P3T1Q1_Rep-arg2" name="P3T1Q1_Rep" value="arg2">
+        <label for="P3T1Q1_Rep-arg2">第二个</label>
+        <br><br>
         <br>
         <button type="button" id="item1Button">Next</button>
     </div>
@@ -174,6 +180,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic2ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics2arg}</p>
+        <label>P3T2Q1_Rep:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P3T2Q1_Rep-arg1" name="P3T2Q1_Rep" value="arg1" required>
+        <label for="P3T2Q1_Rep-arg1">第一个</label>
+        <input type="radio" id="P3T2Q1_Rep-arg2" name="P3T2Q1_Rep" value="arg2">
+        <label for="P3T2Q1_Rep-arg2">第二个</label>
+        <br><br>
         <br>
         <button type="button" id="item2Button">Next</button>
     </div>
@@ -185,6 +197,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic3ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics3arg}</p>
+        <label>P3T3Q1_Rep:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P3T3Q1_Rep-arg1" name="P3T3Q1_Rep" value="arg1" required>
+        <label for="P3T3Q1_Rep-arg1">第一个</label>
+        <input type="radio" id="P3T3Q1_Rep-arg2" name="P3T3Q1_Rep" value="arg2">
+        <label for="P3T3Q1_Rep-arg2">第二个</label>
+        <br><br>
         <br>
         <button type="button" id="item3Button">Next</button>
     </div>
@@ -196,6 +214,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topic4ProCon2nd}</p>
         <p>下面是对应的支持和反对的意见。</p>
         <p>${topics4arg}</p>
+        <label>P3T4Q1_Rep:选择一个arg继续阅读</label><br>
+        <input type="radio" id="P3T4Q1_Rep-arg1" name="P3T4Q1_Rep" value="arg1" required>
+        <label for="P3T4Q1_Rep-arg1">第一个</label>
+        <input type="radio" id="P3T4Q1_Rep-arg2" name="P3T4Q1_Rep" value="arg2">
+        <label for="P3T4Q1_Rep-arg2">第二个</label>
+        <br><br>
         <br>
         <button type="button" id="item4Button">Next</button>
     </div>

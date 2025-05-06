@@ -106,6 +106,28 @@ const playerSchema = new mongoose.Schema({
     default: null
   },
 
+  // phase3_repQ Q1 (pick one to read):
+  P3T1Q1_Rep: {
+    type: String,
+    enum: ['arg1', 'arg2'],
+    default: null
+  },
+  P3T2Q1_Rep: {
+    type: String,
+    enum: ['arg1', 'arg2'],
+    default: null
+  },
+  P3T3Q1_Rep: {
+    type: String,
+    enum: ['arg1', 'arg2'],
+    default: null
+  },
+  P3T4Q1_Rep: {
+    type: String,
+    enum: ['arg1', 'arg2'],
+    default: null
+  },
+
   // created time for data:
   createdAt: {
     type: Date,

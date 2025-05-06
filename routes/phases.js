@@ -153,6 +153,28 @@ router.get('/phase3_repQ', async (req, res) => {
 })
 
 // Phase3_repQ Collect Answers Route
+router.post('/phase3_repQ', async (req, res) => {
+  try {
+    const playerId = req.session.playerId;
+    const player = await Player.findById(playerId);
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
+    // Phase3_repQ Q1:
+    player.P3T1Q1_Rep = req.body.P3T1Q1_Rep;
+    player.P3T2Q1_Rep = req.body.P3T2Q1_Rep;
+    player.P3T3Q1_Rep = req.body.P3T3Q1_Rep;
+    player.P3T4Q1_Rep = req.body.P3T4Q1_Rep;
+
+    await player.save();
+
+    res.redirect('/phases/phase3_newQ'); // or whatever your next step is
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Failed to save responses');
+  }
+});
+
 
 // Phase3_newQ Route
 router.get('/phase3_newQ', (req, res) => {

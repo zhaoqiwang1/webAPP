@@ -171,25 +171,30 @@ document.addEventListener('DOMContentLoaded', function () {
         <label for="P2T1Q1-arg2">第二个</label>
         <br><br>
         <p>请给这两个arguments打分</p>
-        <label for="P2T1Q2">Arg1:</label>
-        <select name="P2T1Q2" id="P2T1Q2" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <br>
-        <label for="P2T1Q3">Arg2:</label>
-        <select name="P2T1Q3" id="P2T1Q3" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P2T1Q2">Arg1:</label>
+            <select name="P2T1Q2" id="P2T1Q2" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+          <label for="P2T1Q3">Arg2:</label>
+          <select name="P2T1Q3" id="P2T1Q3" required>
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          </div>
+        </div>
         <br>
         <button type="button" id="item1Button">Next</button>
     </div>
@@ -208,25 +213,30 @@ document.addEventListener('DOMContentLoaded', function () {
         <label for="P2T2Q1-arg2">第二个</label>
         <br><br>
         <p>请给这两个arguments打分</p>
-        <label for="P2T2Q2">Arg1:</label>
-        <select name="P2T2Q2" id="P2T2Q2" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <br>
-        <label for="P2T2Q3">Arg2:</label>
-        <select name="P2T2Q3" id="P2T2Q3" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P2T2Q2">Arg1:</label>
+            <select name="P2T2Q2" id="P2T2Q2" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label for="P2T2Q3">Arg2:</label>
+            <select name="P2T2Q3" id="P2T2Q3" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
         <br>
         <button type="button" id="item2Button">Next</button>
     </div>
@@ -245,25 +255,30 @@ document.addEventListener('DOMContentLoaded', function () {
         <label for="P2T3Q1-arg2">第二个</label>
         <br><br>
         <p>请给这两个arguments打分</p>
-        <label for="P2T3Q2">Arg1:</label>
-        <select name="P2T3Q2" id="P2T3Q2" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <br>
-        <label for="P2T3Q3">Arg2:</label>
-        <select name="P2T3Q3" id="P2T3Q3" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P2T3Q2">Arg1:</label>
+            <select name="P2T3Q2" id="P2T3Q2" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label for="P2T3Q3">Arg2:</label>
+            <select name="P2T3Q3" id="P2T3Q3" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+           </div>
+        </div> 
         <br>
         <button type="button" id="item3Button">Next</button>
     </div>
@@ -282,25 +297,30 @@ document.addEventListener('DOMContentLoaded', function () {
         <label for="P2T4Q1-arg2">第二个</label>
         <br><br>
         <p>请给这两个arguments打分</p>
-        <label for="P2T4Q2">Arg1:</label>
-        <select name="P2T4Q2" id="P2T4Q2" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <br>
-        <label for="P2T4Q3">Arg2:</label>
-        <select name="P2T4Q3" id="P2T4Q3" required>
-          <option value="">--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P2T4Q2">Arg1:</label>
+            <select name="P2T4Q2" id="P2T4Q2" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div> 
+            <label for="P2T4Q3">Arg2:</label>
+            <select name="P2T4Q3" id="P2T4Q3" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+           </div>
+         </div>   
         <br>
         <button type="button" id="item4Button">Next</button>
     </div>

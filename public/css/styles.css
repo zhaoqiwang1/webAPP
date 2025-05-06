@@ -16,3 +16,10 @@
 .hidden {
   display: none;
 }
+
+.Q2Q3-container {
+  display: flex;
+  gap: 30px; /* Optional: adds space between the two dropdowns */
+  align-items: center;
+  padding-left: 30px;
+}

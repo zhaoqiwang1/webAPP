@@ -27,35 +27,35 @@ export const topicsContent = [
 export const topicArguments = [
   {
   topic: 0,
-  topic_text: "culture",
-  supportingArg_F: "支持 - 有谬误 --- culture",
-  opposingArg: "反对 - 无谬误 --- culture",
-  supportingArg: "支持 - 无谬误 --- culture",
-  opposingArg_F: "反对 - 有谬误 --- culture"
+  topic_text: "文化",
+  supportingArg_F: "支持 - 有谬误 --- 文化",
+  opposingArg: "反对 - 无谬误 --- 文化",
+  supportingArg: "支持 - 无谬误 --- 文化",
+  opposingArg_F: "反对 - 有谬误 --- 文化"
 },
 {
   topic: 1,
-  topic_text: "technology",
-  supportingArg_F: "支持 - 有谬误 --- technology",
-  opposingArg: "反对 - 无谬误 --- technology",
-  supportingArg: "支持 - 无谬误 --- technology",
-  opposingArg_F: "反对 - 有谬误 --- technology"
+  topic_text: "科技",
+  supportingArg_F: "支持 - 有谬误 --- 科技",
+  opposingArg: "反对 - 无谬误 --- 科技",
+  supportingArg: "支持 - 无谬误 --- 科技",
+  opposingArg_F: "反对 - 有谬误 --- 科技"
 },
 {
   topic: 2,
-  topic_text: "economics",
-  supportingArg_F: "支持 - 有谬误 --- economics",
-  opposingArg: "反对 - 无谬误 --- economics",
-  supportingArg: "支持 - 无谬误 --- economics",
-  opposingArg_F: "反对 - 有谬误 --- economics"
+  topic_text: "经济",
+  supportingArg_F: "支持 - 有谬误 --- 经济",
+  opposingArg: "反对 - 无谬误 --- 经济",
+  supportingArg: "支持 - 无谬误 --- 经济",
+  opposingArg_F: "反对 - 有谬误 --- 经济"
 },
 {
   topic: 3,
-  topic_text: "societal",
-  supportingArg_F: "支持 - 有谬误 --- societal",
-  opposingArg: "反对 - 无谬误 --- societal",
-  supportingArg: "支持 - 无谬误 --- societal",
-  opposingArg_F: "反对 - 有谬误 --- societal"
+  topic_text: "社会",
+  supportingArg_F: "支持 - 有谬误 --- 社会",
+  opposingArg: "反对 - 无谬误 --- 社会",
+  supportingArg: "支持 - 无谬误 --- 社会",
+  opposingArg_F: "反对 - 有谬误 --- 社会"
 }
 ];
 
@@ -63,35 +63,35 @@ export const topicArguments = [
 export const topicArguments_phase3New = [
   {
   topic: 0,
-  topic_text: "culture",
-  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- culture",
-  opposingArg: "反对 - 无谬误 （阶段三，新) --- culture",
-  supportingArg: "支持 - 无谬误 （阶段三，新) --- culture",
-  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- culture"
+  topic_text: "文化",
+  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- 文化",
+  opposingArg: "反对 - 无谬误 （阶段三，新) --- 文化",
+  supportingArg: "支持 - 无谬误 （阶段三，新) --- 文化",
+  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- 文化"
 },
 {
   topic: 1,
-  topic_text: "technology",
-  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- technology",
-  opposingArg: "反对 - 无谬误 （阶段三，新) --- technology",
-  supportingArg: "支持 - 无谬误 （阶段三，新) --- technology",
-  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- technology"
+  topic_text: "科技",
+  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- 科技",
+  opposingArg: "反对 - 无谬误 （阶段三，新) --- 科技",
+  supportingArg: "支持 - 无谬误 （阶段三，新) --- 科技",
+  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- 科技"
 },
 {
   topic: 2,
-  topic_text: "economics",
-  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- economics",
-  opposingArg: "反对 - 无谬误 （阶段三，新) --- economics",
-  supportingArg: "支持 - 无谬误 （阶段三，新) --- economics",
-  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- economics"
+  topic_text: "经济",
+  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- 经济",
+  opposingArg: "反对 - 无谬误 （阶段三，新) --- 经济",
+  supportingArg: "支持 - 无谬误 （阶段三，新) --- 经济",
+  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- 经济"
 },
 {
   topic: 3,
-  topic_text: "societal",
-  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- societal",
-  opposingArg: "反对 - 无谬误 （阶段三，新) --- societal",
-  supportingArg: "支持 - 无谬误 （阶段三，新) --- societal",
-  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- societal"
+  topic_text: "社会",
+  supportingArg_F: "支持 - 有谬误 （阶段三，新) --- 社会",
+  opposingArg: "反对 - 无谬误 （阶段三，新) --- 社会",
+  supportingArg: "支持 - 无谬误 （阶段三，新) --- 社会",
+  opposingArg_F: "反对 - 有谬误 （阶段三，新) --- 社会"
 }
 ];
 

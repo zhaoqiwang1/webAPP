@@ -13,7 +13,13 @@
 <p>你上一阶段对第三个话题的态度是: <%= player.P1T3Q1 %></p>
 <p>你上一阶段对第四个话题的态度是: <%= player.P1T4Q1 %></p>
 <br>
-
+<!-- 网格容器 -->
+<form action="/phases/phase3_newQ" method="POST">
+  <div class="grid-container" id="phase3-newQ-grids">
+  </div>
+  <button type="submit" id="phase3-newQSubmitButton">提交并进入下一阶段</button>
+</form>
+<br>
 <script>
   // Attach to global window object
   window.playerData = {

@@ -120,7 +120,7 @@ router.post('/phase2', async (req, res) => {
 
     await player.save();
 
-    res.redirect('/phases/phase2'); // or whatever your next step is
+    res.redirect('/phases/phase3_intro'); // or whatever your next step is
   } catch (err) {
     console.error(err);
     res.status(500).send('Failed to save responses');
@@ -137,8 +137,19 @@ router.get('/phase3_intro', (req, res) => {
 })
 
 // Phase3_repQ Route
-router.get('/phase3_repQ', (req, res) => {
-  res.render('phases/phase3_repQ')
+router.get('/phase3_repQ', async (req, res) => {
+  try {
+    const player = await Player.findOne({ _id: req.session.playerId }); // Retrieve player by session playerId
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
+    res.render('phases/phase3_repQ', {
+      player: player,  // Pass player object to EJS template
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Error fetching player');
+  }
 })
 
 // Phase3_repQ Collect Answers Route

@@ -232,13 +232,17 @@ router.post('/phase3_newQ', async (req, res) => {
 
     await player.save();
 
-    res.redirect('/phases/phase3_newQ'); // or whatever your next step is
+    res.redirect('/phases/gameEnd'); // or whatever your next step is
   } catch (err) {
     console.error(err);
     res.status(500).send('Failed to save responses');
   }
 });
 
+// Game End Route
+router.get('/gameEnd', (req, res) => {
+  res.render('phases/gameEnd')
+})
 
 // export routes
 module.exports = router

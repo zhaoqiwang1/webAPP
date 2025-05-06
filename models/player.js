@@ -84,6 +84,28 @@ const playerSchema = new mongoose.Schema({
     default: null
   },
 
+  // phase2 Q3 (evaluation of arg2):
+  P2T1Q3: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P2T2Q3: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P2T3Q3: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P2T4Q3: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+
   // created time for data:
   createdAt: {
     type: Date,

@@ -112,6 +112,11 @@ router.post('/phase2', async (req, res) => {
     player.P2T2Q2 = req.body.P2T2Q2;
     player.P2T3Q2 = req.body.P2T3Q2;
     player.P2T4Q2 = req.body.P2T4Q2;
+    // Phase2 Q3:
+    player.P2T1Q3 = req.body.P2T1Q3;
+    player.P2T2Q3 = req.body.P2T2Q3;
+    player.P2T3Q3 = req.body.P2T3Q3;
+    player.P2T4Q3 = req.body.P2T4Q3;
 
     await player.save();
 

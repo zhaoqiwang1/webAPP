@@ -17,4 +17,15 @@
 </form>
 <br>
 <a href="/phases/phase3_intro">点击进入第三阶段--介绍偷换概念</a>
+<!-- Expose player data to JS running in the browser -->
+<script>
+  const playerData = {
+    name: "<%= player.name %>",
+    playerId: "<%= player.playerId %>",
+    P1T1Q1: "<%= player.P1T1Q1 %>",
+    P1T2Q1: "<%= player.P1T2Q1 %>",
+    P1T3Q1: "<%= player.P1T3Q1 %>",
+    P1T4Q1: "<%= player.P1T4Q1 %>"
+  };
+</script>
 <script type="module" src="../js/phase2.js"></script>

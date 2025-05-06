@@ -81,12 +81,12 @@ router.post('/phase1', async (req, res) => {
 // Phase2 Route
 router.get('/phase2', async (req, res) => {
     try {
-    const player = await Player.findOne({ _id: req.session.playerId }); // Retrieve author by session playerId
+    const player = await Player.findOne({ _id: req.session.playerId }); // Retrieve player by session playerId
     if (!player) {
       return res.status(404).send('Player not found');
     }
     res.render('phases/phase2', {
-      player: player,  // Pass author object to EJS template
+      player: player,  // Pass player object to EJS template
     });
   } catch (err) {
     console.log(err);

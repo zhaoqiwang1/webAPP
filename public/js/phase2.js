@@ -2,19 +2,12 @@ import { topicsTitle, topicsContent} from "./topicContents.js";
 
 // 查看且保证phase1得到的玩家id，玩家回答的Phase1问题的答案能够 pass 到 phase2:
 // Pass player data from EJS to JavaScript directly
-const playerName = "<%= player.name %>";
-const playerId = "<%= player.playerId %>";
-const playerP1T1Q1 = "<%= player.P1T1Q1 %>";
-const playerP1T2Q1 = "<%= player.P1T2Q1 %>";
-const playerP1T3Q1 = "<%= player.P1T3Q1 %>";
-const playerP1T4Q1 = "<%= player.P1T4Q1 %>";
-
-console.log(playerName);
-console.log(playerId);
-console.log(playerP1T1Q1);
-console.log(playerP1T2Q1);
-console.log(playerP1T3Q1);
-console.log(playerP1T4Q1);
+console.log(playerData.name);
+console.log(playerData.playerId);
+console.log(playerData.P1T1Q1);
+console.log(playerData.P1T2Q1);
+console.log(playerData.P1T3Q1);
+console.log(playerData.P1T4Q1);
 
 // Retrieve from localStorage
 const randomTopicOrder = JSON.parse(localStorage.getItem('randomTopicOrder'));

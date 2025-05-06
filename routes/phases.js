@@ -54,29 +54,27 @@ router.get('/phase1', async (req, res) => {
 // })
 
 // Phase1 Collect Answers Route
-// router.post('/phase1', async (req, res) => {
-//   try {
-//     const { P1T1Q1, P1T1Q2 } = req.body;
-//     const playerId = req.session.playerId;
+router.post('/phase1', async (req, res) => {
+  try {
+    const playerId = req.session.playerId;
+    const player = await Player.findById(playerId);
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
 
-//     if (!playerId) {
-//       return res.status(400).send('No session found. Please start again.');
-//     }
+    player.P1T1Q1 = req.body.P1T1Q1;
+    player.P1T2Q1 = req.body.P1T2Q1;
+    player.P1T3Q1 = req.body.P1T3Q1;
+    player.P1T4Q1 = req.body.P1T4Q1;
+    
+    await player.save();
 
-//     const player = await Author.findById(playerId);
-//     if (!player) {
-//       return res.status(404).send('player not found');
-//     }
-
-//     player.P1T1Q1 = P1T1Q1;
-//     player.P1T1Q2 = P1T1Q2;
-//     await player.save();
-
-//     res.send('All data saved!');
-//   } catch (err) {
-//     res.status(500).send('Error saving phase1 data');
-//   }
-// });
+    res.redirect('/phases/phase2'); // or whatever your next step is
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Failed to save responses');
+  }
+});
 
 
 

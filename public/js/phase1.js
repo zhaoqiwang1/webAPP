@@ -58,10 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[0]].TopicIntro}</p>
         <p>${topic1ProCon1st}</p>
         <p>${topic1ProCon2nd}</p>
-        <p>P1T1Q1</p>
-        <label><input type="radio" name="P1T1Q1" value="A" required> A</label>
-        <label><input type="radio" name="P1T1Q1" value="B"> B</label>
-        <button id="item1Button">Next</button>
+        <label>P1T1Q1:</label><br>
+        <input type="radio" id="P1T1Q1-support" name="P1T1Q1" value="support" required>
+        <label for="P1T1Q1-support">支持</label>
+        <input type="radio" id="P1T1Q1-oppose" name="P1T1Q1" value="oppose">
+        <label for="P1T1Q1-oppose">反对</label>
+        <br><br>
+        <button type="button" id="item1Button">Next</button>
     </div>
     <!-- 第二个网格项 -->
     <div class="grid-item2">
@@ -69,10 +72,13 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[1]].TopicIntro}</p>
         <p>${topic2ProCon1st}</p>
         <p>${topic2ProCon2nd}</p>
-        <p>P1T1Q2</p>
-        <label><input type="radio" name="P1T1Q2" value="A" required> A</label>
-        <label><input type="radio" name="P1T1Q2" value="B"> B</label>
-        <button id="item2Button">Next</button>
+        <label>P1T2Q1:</label><br>
+        <input type="radio" id="P1T2Q1-support" name="P1T2Q1" value="support" required>
+        <label for="P1T2Q1-support">支持</label>
+        <input type="radio" id="P1T2Q1-oppose" name="P1T2Q1" value="oppose">
+        <label for="P1T2Q1-oppose">反对</label>
+        <br><br>
+        <button type="button" id="item2Button">Next</button>
     </div>
     <!-- 第三个网格项 -->
     <div class="grid-item3">
@@ -80,7 +86,13 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[2]].TopicIntro}</p>
         <p>${topic3ProCon1st}</p>
         <p>${topic3ProCon2nd}</p>
-        <button id="item3Button">Next</button>
+        <label>P1T3Q1:</label><br>
+        <input type="radio" id="P1T3Q1-support" name="P1T3Q1" value="support" required>
+        <label for="P1T3Q1-support">支持</label>
+        <input type="radio" id="P1T3Q1-oppose" name="P1T3Q1" value="oppose">
+        <label for="P1T3Q1-oppose">反对</label>
+        <br><br>
+        <button type="button" id="item3Button">Next</button>
     </div>
     <!-- 第四个网格项 -->
     <div class="grid-item4">
@@ -88,7 +100,13 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[3]].TopicIntro}</p>
         <p>${topic4ProCon1st}</p>
         <p>${topic4ProCon2nd}</p>
-        <button id="item4Button">Next</button>
+        <label>P1T4Q1:</label><br>
+        <input type="radio" id="P1T4Q1-support" name="P1T4Q1" value="support" required>
+        <label for="P1T4Q1-support">支持</label>
+        <input type="radio" id="P1T4Q1-oppose" name="P1T4Q1" value="oppose">
+        <label for="P1T4Q1-oppose">反对</label>
+        <br><br>
+        <button type="button" id="item4Button">Next</button>
     </div>
   `;
 

@@ -1,3 +1,15 @@
 <h2>这是第二阶段</h2>
 <hr>
+<p>给前一阶段的四个话题加入对应的支持和反对的arguments。</p>
+<p>且追加新的几个问题。</p>
+<h2>Welcome, <%= player.name %>!</h2>
+<p>你的随机玩家ID是: <%= player.playerId %></p>
+<!-- 网格容器 -->
+<form action="/phases/phase2" method="POST">
+  <div class="grid-container" id="phase2-grids">
+  </div>
+  <button type="submit" id="phase2SubmitButton">提交并进入下一阶段</button>
+</form>
+<br>
 <a href="/phases/phase3_intro">点击进入第三阶段--介绍偷换概念</a>
+<script type="module" src="../js/phase2.js"></script>

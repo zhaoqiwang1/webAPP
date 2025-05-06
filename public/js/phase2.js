@@ -1,22 +1,13 @@
 import { topicsTitle, topicsContent} from "./topicContents.js";
 
-// #region 对四个话题进行整体随机处理:
-const topicOrder = [0, 1, 2, 3];
-export const randomTopicOrder = [...topicOrder].sort(() => Math.random() - 0.5);
-// console.log("原话题顺序:", topicOrder);
-// console.log("原话题顺序:", topicOrder[1]);
-console.log("phase1,打乱顺序后的话题顺序:", randomTopicOrder);
-// console.log("打乱顺序后的新顺序:", randomTopicOrder[0]);
-// #endregion
+// console.log("phase2,打乱顺序后的话题顺序:", randomTopicOrder);
+// console.log("phase2,正面负面信息新顺序:", proConOrder);
 
+// Retrieve from localStorage
+const randomTopicOrder = JSON.parse(localStorage.getItem('randomTopicOrder'));
+const proConOrder = JSON.parse(localStorage.getItem('proConOrder'));
 
 // #region 为每个话题的正面和负面介绍进行随机处理:
-export const proConOrder = Array.from({ length: 4 }, () => Math.random() < 0.5 ? 0 : 1);
-console.log("phase1,正面负面信息新顺序:", proConOrder);
-
-// Store in localStorage to persist across routes
-localStorage.setItem('randomTopicOrder', JSON.stringify(randomTopicOrder));
-localStorage.setItem('proConOrder', JSON.stringify(proConOrder));
 
 let topic1ProCon1st, topic1ProCon2nd, topic2ProCon1st, topic2ProCon2nd, topic3ProCon1st, topic3ProCon2nd, topic4ProCon1st, topic4ProCon2nd;
 // 处理第一个随机话题：
@@ -54,20 +45,14 @@ if (proConOrder[3]===0) {
 // #endregion
 
 document.addEventListener('DOMContentLoaded', function () {
-  const phase1GridsDiv = document.getElementById('phase1-grids');
-  phase1GridsDiv.innerHTML = `
+  const phase2GridsDiv = document.getElementById('phase2-grids');
+  phase2GridsDiv.innerHTML = `
     <!-- 第一个网格项 -->
     <div class="grid-item1">
         <h3>${topicsTitle[randomTopicOrder[0]]}</h3>
         <p>${topicsContent[randomTopicOrder[0]].TopicIntro}</p>
         <p>${topic1ProCon1st}</p>
         <p>${topic1ProCon2nd}</p>
-        <label>P1T1Q1:</label><br>
-        <input type="radio" id="P1T1Q1-support" name="P1T1Q1" value="support" required>
-        <label for="P1T1Q1-support">支持</label>
-        <input type="radio" id="P1T1Q1-oppose" name="P1T1Q1" value="oppose">
-        <label for="P1T1Q1-oppose">反对</label>
-        <br><br>
         <button type="button" id="item1Button">Next</button>
     </div>
     <!-- 第二个网格项 -->
@@ -76,12 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[1]].TopicIntro}</p>
         <p>${topic2ProCon1st}</p>
         <p>${topic2ProCon2nd}</p>
-        <label>P1T2Q1:</label><br>
-        <input type="radio" id="P1T2Q1-support" name="P1T2Q1" value="support" required>
-        <label for="P1T2Q1-support">支持</label>
-        <input type="radio" id="P1T2Q1-oppose" name="P1T2Q1" value="oppose">
-        <label for="P1T2Q1-oppose">反对</label>
-        <br><br>
         <button type="button" id="item2Button">Next</button>
     </div>
     <!-- 第三个网格项 -->
@@ -90,12 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[2]].TopicIntro}</p>
         <p>${topic3ProCon1st}</p>
         <p>${topic3ProCon2nd}</p>
-        <label>P1T3Q1:</label><br>
-        <input type="radio" id="P1T3Q1-support" name="P1T3Q1" value="support" required>
-        <label for="P1T3Q1-support">支持</label>
-        <input type="radio" id="P1T3Q1-oppose" name="P1T3Q1" value="oppose">
-        <label for="P1T3Q1-oppose">反对</label>
-        <br><br>
         <button type="button" id="item3Button">Next</button>
     </div>
     <!-- 第四个网格项 -->
@@ -104,26 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${topicsContent[randomTopicOrder[3]].TopicIntro}</p>
         <p>${topic4ProCon1st}</p>
         <p>${topic4ProCon2nd}</p>
-        <label>P1T4Q1:</label><br>
-        <input type="radio" id="P1T4Q1-support" name="P1T4Q1" value="support" required>
-        <label for="P1T4Q1-support">支持</label>
-        <input type="radio" id="P1T4Q1-oppose" name="P1T4Q1" value="oppose">
-        <label for="P1T4Q1-oppose">反对</label>
-        <br><br>
         <button type="button" id="item4Button">Next</button>
     </div>
   `;
 
 });
-
-
-
-
-
-
-
-
-
-
-
-

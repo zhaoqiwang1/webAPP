@@ -19,7 +19,8 @@
 <a href="/phases/phase3_intro">点击进入第三阶段--介绍偷换概念</a>
 <!-- Expose player data to JS running in the browser -->
 <script>
-  const playerData = {
+  // Attach to global window object
+  window.playerData = {
     name: "<%= player.name %>",
     playerId: "<%= player.playerId %>",
     P1T1Q1: "<%= player.P1T1Q1 %>",

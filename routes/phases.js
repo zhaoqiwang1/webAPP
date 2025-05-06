@@ -218,7 +218,18 @@ router.post('/phase3_newQ', async (req, res) => {
     player.P3T3Q1_New = req.body.P3T3Q1_New;
     player.P3T4Q1_New = req.body.P3T4Q1_New;
 
+    // Phase3_newQ Q2:
+    player.P3T1Q2_New = req.body.P3T1Q2_New;
+    player.P3T2Q2_New = req.body.P3T2Q2_New;
+    player.P3T3Q2_New = req.body.P3T3Q2_New;
+    player.P3T4Q2_New = req.body.P3T4Q2_New;
   
+    // Phase3_newQ Q3:
+    player.P3T1Q3_New = req.body.P3T1Q3_New;
+    player.P3T2Q3_New = req.body.P3T2Q3_New;
+    player.P3T3Q3_New = req.body.P3T3Q3_New;
+    player.P3T4Q3_New = req.body.P3T4Q3_New;
+
     await player.save();
 
     res.redirect('/phases/phase3_newQ'); // or whatever your next step is

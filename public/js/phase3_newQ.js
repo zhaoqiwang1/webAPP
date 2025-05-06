@@ -161,6 +161,31 @@ document.addEventListener('DOMContentLoaded', function () {
         <input type="radio" id="P3T1Q1_New-arg2" name="P3T1Q1_New" value="arg2">
         <label for="P3T1Q1_New-arg2">第二个</label>
         <br><br>
+        <p>请给这两个arguments打分</p>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P3T1Q2_New">Arg1:</label>
+            <select name="P3T1Q2_New" id="P3T1Q2_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label for="P3T1Q3_New">Arg2:</label>
+            <select name="P3T1Q3_New" id="P3T1Q3_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
         <br>
         <button type="button" id="item1Button">Next</button>
     </div>
@@ -178,6 +203,31 @@ document.addEventListener('DOMContentLoaded', function () {
         <input type="radio" id="P3T2Q1_New-arg2" name="P3T2Q1_New" value="arg2">
         <label for="P3T2Q1_New-arg2">第二个</label>
         <br><br>
+        <p>请给这两个arguments打分</p>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P3T2Q2_New">Arg1:</label>
+            <select name="P3T2Q2_New" id="P3T2Q2_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label for="P3T2Q3_New">Arg2:</label>
+            <select name="P3T2Q3_New" id="P3T2Q3_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
         <br>
         <button type="button" id="item2Button">Next</button>
     </div>
@@ -195,6 +245,31 @@ document.addEventListener('DOMContentLoaded', function () {
         <input type="radio" id="P3T3Q1_New-arg2" name="P3T3Q1_New" value="arg2">
         <label for="P3T3Q1_New-arg2">第二个</label>
         <br><br>
+        <p>请给这两个arguments打分</p>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P3T3Q2_New">Arg1:</label>
+            <select name="P3T3Q2_New" id="P3T3Q2_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label for="P3T3Q3_New">Arg2:</label>
+            <select name="P3T3Q3_New" id="P3T3Q3_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
         <br>
         <button type="button" id="item3Button">Next</button>
     </div>
@@ -212,6 +287,31 @@ document.addEventListener('DOMContentLoaded', function () {
         <input type="radio" id="P3T4Q1_New-arg2" name="P3T4Q1_New" value="arg2">
         <label for="P3T4Q1_New-arg2">第二个</label>
         <br><br>
+        <p>请给这两个arguments打分</p>
+        <div class="Q2Q3-container">
+          <div>
+            <label for="P3T4Q2_New">Arg1:</label>
+            <select name="P3T4Q2_New" id="P3T4Q2_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label for="P3T4Q3_New">Arg2:</label>
+            <select name="P3T4Q3_New" id="P3T4Q3_New" required>
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
         <br>
         <button type="button" id="item4Button">Next</button>
     </div>

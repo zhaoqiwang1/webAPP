@@ -172,7 +172,7 @@ const playerSchema = new mongoose.Schema({
       default: null
     },
 
-    // phase3_newQ Q1 (pick one to read):
+  // phase3_newQ Q1 (pick one to read):
   P3T1Q1_New: {
     type: String,
     enum: ['arg1', 'arg2'],
@@ -193,6 +193,50 @@ const playerSchema = new mongoose.Schema({
     enum: ['arg1', 'arg2'],
     default: null
   },
+
+   // phase3_New Q2 (evaluation of arg1):
+   P3T1Q2_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T2Q2_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T3Q2_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T4Q2_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+
+    // phase3_New Q3 (evaluation of arg2):
+    P3T1Q3_New: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
+    P3T2Q3_New: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
+    P3T3Q3_New: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
+    P3T4Q3_New: {
+      type: String,
+      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+      default: null
+    },
 
   // created time for data:
   createdAt: {

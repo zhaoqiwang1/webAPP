@@ -102,11 +102,16 @@ router.post('/phase2', async (req, res) => {
     if (!player) {
       return res.status(404).send('Player not found');
     }
-
+    // Phase2 Q1:
     player.P2T1Q1 = req.body.P2T1Q1;
     player.P2T2Q1 = req.body.P2T2Q1;
     player.P2T3Q1 = req.body.P2T3Q1;
     player.P2T4Q1 = req.body.P2T4Q1;
+    // Phase2 Q2:
+    player.P2T1Q2 = req.body.P2T1Q2;
+    player.P2T2Q2 = req.body.P2T2Q2;
+    player.P2T3Q2 = req.body.P2T3Q2;
+    player.P2T4Q2 = req.body.P2T4Q2;
 
     await player.save();
 

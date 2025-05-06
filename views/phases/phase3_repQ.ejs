@@ -12,5 +12,25 @@
 <p>你上一阶段对第二个话题的态度是: <%= player.P1T2Q1 %></p>
 <p>你上一阶段对第三个话题的态度是: <%= player.P1T3Q1 %></p>
 <p>你上一阶段对第四个话题的态度是: <%= player.P1T4Q1 %></p>
-
+<br>
+<!-- 网格容器 -->
+<form action="/phases/phase3_repQ" method="POST">
+  <div class="grid-container" id="phase3-repQ-grids">
+  </div>
+  <button type="submit" id="phase3-repQSubmitButton">提交并进入下一阶段</button>
+</form>
+<br>
 <a href="/phases/phase3_newQ">点击进入第三阶段--新概念偷换和新问题</a>
+<!-- Expose player data to JS running in the browser -->
+<script>
+  // Attach to global window object
+  window.playerData = {
+    name: "<%= player.name %>",
+    playerId: "<%= player.playerId %>",
+    P1T1Q1: "<%= player.P1T1Q1 %>",
+    P1T2Q1: "<%= player.P1T2Q1 %>",
+    P1T3Q1: "<%= player.P1T3Q1 %>",
+    P1T4Q1: "<%= player.P1T4Q1 %>"
+  };
+</script>
+<script type="module" src="../js/phase3_repQ.js"></script>

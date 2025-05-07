@@ -62,6 +62,36 @@ router.post('/phase1', async (req, res) => {
       return res.status(404).send('Player not found');
     }
 
+    // Check if phase1 already submitted
+    if (player.phase1Submitted) {
+      // Don't overwrite data, just move forward
+      return res.redirect('/phases/phase2?alreadySubmitted=true');
+    }
+
+    player.P1T1Q1 = req.body.P1T1Q1;
+    player.P1T2Q1 = req.body.P1T2Q1;
+    player.P1T3Q1 = req.body.P1T3Q1;
+    player.P1T4Q1 = req.body.P1T4Q1;
+
+    player.phase1Submitted = true; // lock submission
+
+    await player.save();
+
+    res.redirect('/phases/phase2'); // or whatever your next step is
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Failed to save responses');
+  }
+});
+/* Below is the route for post /phase1 with out lock submission:
+router.post('/phase1', async (req, res) => {
+  try {
+    const playerId = req.session.playerId;
+    const player = await Player.findById(playerId);
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
+
     player.P1T1Q1 = req.body.P1T1Q1;
     player.P1T2Q1 = req.body.P1T2Q1;
     player.P1T3Q1 = req.body.P1T3Q1;
@@ -76,7 +106,7 @@ router.post('/phase1', async (req, res) => {
   }
 });
 
-
+*/
 
 // Phase2 Route
 router.get('/phase2', async (req, res) => {
@@ -102,6 +132,13 @@ router.post('/phase2', async (req, res) => {
     if (!player) {
       return res.status(404).send('Player not found');
     }
+
+    // Check if phase1 already submitted
+    if (player.phase2Submitted) {
+      // Don't overwrite data, just move forward
+      return res.redirect('/phases/phase3_intro?alreadySubmitted=true');
+    }
+
     // Phase2 Q1:
     player.P2T1Q1 = req.body.P2T1Q1;
     player.P2T2Q1 = req.body.P2T2Q1;
@@ -117,6 +154,8 @@ router.post('/phase2', async (req, res) => {
     player.P2T2Q3 = req.body.P2T2Q3;
     player.P2T3Q3 = req.body.P2T3Q3;
     player.P2T4Q3 = req.body.P2T4Q3;
+
+    player.phase2Submitted = true; // lock submission
 
     await player.save();
 
@@ -160,6 +199,13 @@ router.post('/phase3_repQ', async (req, res) => {
     if (!player) {
       return res.status(404).send('Player not found');
     }
+
+    // Check if phase1 already submitted
+    if (player.phase3RepQSubmitted) {
+      // Don't overwrite data, just move forward
+      return res.redirect('/phases/phase3_newQ?alreadySubmitted=true');
+    }
+
     // Phase3_repQ Q1:
     player.P3T1Q1_Rep = req.body.P3T1Q1_Rep;
     player.P3T2Q1_Rep = req.body.P3T2Q1_Rep;
@@ -177,6 +223,8 @@ router.post('/phase3_repQ', async (req, res) => {
     player.P3T2Q3_Rep = req.body.P3T2Q3_Rep;
     player.P3T3Q3_Rep = req.body.P3T3Q3_Rep;
     player.P3T4Q3_Rep = req.body.P3T4Q3_Rep;
+
+    player.phase3RepQSubmitted = true; // lock submission
 
     await player.save();
 
@@ -212,6 +260,13 @@ router.post('/phase3_newQ', async (req, res) => {
     if (!player) {
       return res.status(404).send('Player not found');
     }
+
+    // Check if answers already submitted
+    if (player.phase3NewQSubmitted) {
+      // Don't overwrite data, just move forward
+      return res.redirect('/phases/gameEnd?alreadySubmitted=true');
+    }
+
     // Phase3_newQ Q1:
     player.P3T1Q1_New = req.body.P3T1Q1_New;
     player.P3T2Q1_New = req.body.P3T2Q1_New;
@@ -229,6 +284,8 @@ router.post('/phase3_newQ', async (req, res) => {
     player.P3T2Q3_New = req.body.P3T2Q3_New;
     player.P3T3Q3_New = req.body.P3T3Q3_New;
     player.P3T4Q3_New = req.body.P3T4Q3_New;
+
+    player.phase3NewQSubmitted = true; // lock submission
 
     await player.save();
 

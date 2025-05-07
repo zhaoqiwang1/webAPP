@@ -244,6 +244,12 @@ const playerSchema = new mongoose.Schema({
     default: () => new Date(Date.now() + 8 * 60 * 60 * 1000)
   },
   
+    // Submission locks
+    phase1Submitted: { type: Boolean, default: false },
+    phase2Submitted: { type: Boolean, default: false },
+    phase3RepQSubmitted: { type: Boolean, default: false },
+    phase3NewQSubmitted: { type: Boolean, default: false },
+
 })
 
 module.exports = mongoose.model('Player', playerSchema, 'postedAnswers')

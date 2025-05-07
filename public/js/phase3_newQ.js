@@ -145,6 +145,11 @@ if (proConOrder[3]===0) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('alreadySubmitted') === 'true') {
+    alert("请勿重复作答。");
+  }
+
   const phase3newQGridsDiv = document.getElementById('phase3-newQ-grids');
   phase3newQGridsDiv.innerHTML = `
     <!-- 第一个网格项 -->

@@ -1,5 +1,7 @@
 import { topicsTitle, topicsContent, topicArguments } from "./topicContents.js";
 
+
+
 // 查看且保证phase1得到的玩家id，玩家回答的Phase1问题的答案能够 pass 到 phase2:
 // Pass player data from EJS to JavaScript directly
 console.log(window.playerData.name);
@@ -154,6 +156,11 @@ if (proConOrder[3]===0) {
 // #endregion
 
 document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('alreadySubmitted') === 'true') {
+    alert("请勿重复作答。");
+  }
+
   const phase2GridsDiv = document.getElementById('phase2-grids');
   phase2GridsDiv.innerHTML = `
     <!-- 第一个网格项 -->

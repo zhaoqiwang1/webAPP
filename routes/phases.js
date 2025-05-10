@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const Player = require('../models/player')
-
+const fs = require('fs');
+const path = require('path');
 
 // Create Player ID Route
 router.get('/', (req, res) => {
@@ -172,8 +173,28 @@ router.post('/phase2', async (req, res) => {
 
 // Phase3_intro Route
 router.get('/phase3_intro', (req, res) => {
-  res.render('phases/phase3_intro')
+  const txtFilePath = path.join(__dirname, '..', 'public', 'treatment', 'config.txt');
+  fs.readFile(txtFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Failed to read file:', err);
+      return res.status(500).send('Server error');
+    }
+
+    // Do logic based on file content
+    let message = '';
+    if (data.includes('实验组')) {
+      message = '本次实验是介绍逻辑谬误的实验组。';
+    } else {
+      message = '本次实验是不介绍逻辑谬误的对照组。';
+    }
+
+    // Render EJS page with data
+    res.render('phases/phase3_intro', { message });
+  });
+  //res.render('phases/phase3_intro')
 })
+
+
 
 // Phase3_repQ Route
 router.get('/phase3_repQ', async (req, res) => {

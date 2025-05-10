@@ -174,6 +174,8 @@ router.post('/phase2', async (req, res) => {
 // Phase3_intro Route
 router.get('/phase3_intro', (req, res) => {
   const txtFilePath = path.join(__dirname, '..', 'public', 'treatment', 'config.txt');
+  const treatmentContent = require(path.join(__dirname, '..', 'data', 'logicIntro.js'));
+  
   fs.readFile(txtFilePath, 'utf8', (err, data) => {
     if (err) {
       console.error('Failed to read file:', err);
@@ -183,9 +185,9 @@ router.get('/phase3_intro', (req, res) => {
     // Do logic based on file content
     let message = '';
     if (data.includes('实验组')) {
-      message = '本次实验是介绍逻辑谬误的实验组。';
+      message = treatmentContent.treatment;
     } else {
-      message = '本次实验是不介绍逻辑谬误的对照组。';
+      message = treatmentContent.control;
     }
 
     // Render EJS page with data

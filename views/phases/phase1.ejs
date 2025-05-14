@@ -1,17 +1,19 @@
-<hr>
-<p>
-  注意：请如实回答所有的问题。
-</p>
-<hr>
-<h1>这里是第一阶段</h1>
-<h2>Welcome, <%= player.name %>!</h2>
-<p>你的随机玩家ID是: <%= player.playerId %></p>
-<!-- 网格容器 -->
-<form action="/phases/phase1" method="POST">
-<div class="grid-container" id="phase1-grids">
+<div class="phases-container">
+  <hr>
+  <h1>这里是第一阶段</h1>
+    <div class="left-align-block">
+      <p>你好, <%= player.name %>!</p>
+      <p>你的随机玩家ID是: <%= player.playerId %></p>
+    </div>
+    <!-- 网格容器 -->
+    <form action="/phases/phase1" method="POST">
+      <div class="grid-container" id="phase1-grids">
+      </div>
+      <div class="left-align-block">
+        <p><strong>注意：请认真对待且如实回答每一个问题。</strong></p>
+        <button type="submit" id="phase1SubmitButton" class="button-link">提交并进入下一阶段</button>
+      </div>
+    </form>
 </div>
-<button type="submit" id="phase1SubmitButton">提交并进入下一阶段</button>
-</form>
-<br>
 <!-- <a href="/phases/phase2">点击进入第二阶段</a> -->
 <script type="module" src="../js/phase1.js"></script>

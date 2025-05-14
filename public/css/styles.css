@@ -1,6 +1,6 @@
 /* #region Experimental Instruction Page (index) */
-.instr-container, .createId-container {
-  max-width: 800px;
+.instr-container, .createId-container, .phases-container {
+  max-width: 1000px;
   margin: 50px auto;
   padding: 30px;
   background-color: #ffffff;
@@ -113,6 +113,19 @@
   background-color: #888;
 }
 /* #endregion */
+
+
+/* #region Phase1 Page */
+.left-align-block {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.left-align-block button {
+  margin-top: 5px;
+}
+/* #endregion */
+
 
 .grid-container {
   display: grid;

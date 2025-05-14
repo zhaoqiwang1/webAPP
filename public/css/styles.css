@@ -1,3 +1,52 @@
+/* Experimental Instruction Page (index) */
+.instr-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.instr-description {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.next-link a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.next-link a:hover {
+  background-color: #45a049;
+}
+
+.instr-stage {
+  margin-bottom: 20px;
+}
+.instr-stage h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+.instr-stage p, .instr-stage ul {
+  margin-left: 20px;
+}
+.instr-stage ul {
+  list-style-type: disc;
+}
+/* end of Experimental Instruction Page (index) */
+
 .grid-container {
   display: grid;
   /* 创建四列，每列宽度平均分配剩余空间 */

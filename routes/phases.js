@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
   try {
     const newPlayer = await player.save();
     req.session.playerId = newPlayer._id; // 保存 MongoDB 生成的 _id
-    res.redirect('phases');
+    res.redirect('phases/phase1');
 } catch (err) {
     console.error(err); 
     res.render('phases/index', {

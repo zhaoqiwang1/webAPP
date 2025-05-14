@@ -1,9 +1,11 @@
-<div>
-  <label>Nick-Name</label>
-  <input type="text" name="name" value="<%= player.name %>">
-</div>
-<div>
-  <label>Player ID</label>
-  <input type="number" name="playerId" value="<%= player.playerId %>" step="1">
+<div class="form-row">
+  <div class="form-group">
+    <label for="name">玩家昵称:</label>
+    <input type="text" name="name" value="<%= player.name %>">
+  </div>
+  <div class="form-group">
+    <label for="playerId">玩家ID:</label>
+    <input type="number" name="playerId" value="<%= player.playerId %>" step="1">
+  </div>
 </div>
 

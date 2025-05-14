@@ -1,14 +1,15 @@
-<hr>
-<p>
-  注意：请如实回答所有的问题。
-</p>
-<hr>
-<h2>在这里填写玩家ID</h2>
-首先让被试者填写自己的玩家ID:
-<form action="/phases" id="createIdForm" method="POST">
-  <%- include('_form_fields',{ player: player }) %>
-  <a href="/phases">Cancel</a>
-  <button type="submit" id="idCreateButton">Create</button>
-</form>
-<hr>
-<a href="/phases/phase1">点击进入第一阶段</a>
+<div class="createId-container">
+  <hr>
+  <h2>请在这里填写玩家信息</h2>
+  <form action="/phases" id="createIdForm" method="POST">
+    <div class="form-fields">
+      <%- include('_form_fields', { player: player }) %>
+    </div>
+    <div class="form-actions">
+      <button type="submit" id="idCreateButton" class="button-link">提交</button>
+    </div>
+  </form>
+  <hr>
+  <p><strong>注意：请认真对待且如实回答每一个问题。</strong></p>
+</div>
+<!-- <a href="/phases/phase1">点击进入第一阶段</a> -->

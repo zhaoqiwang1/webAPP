@@ -17,10 +17,15 @@ const playerSchema = new mongoose.Schema({
       message: '{VALUE} is not an integer value'
     }
   },
-  // random Topic Number:
+  // random Topic Number and their labels:
   randomTopicOrder: {
     type: [Number],
     default: []
+  },
+
+  randomTopicOrderLabel: {
+    type: String,
+    default: ''
   },
 
   // phase1 Q1 (support or oppose):

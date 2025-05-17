@@ -67,10 +67,20 @@ router.post('/save-topic-order', async (req, res) => {
 
     // 如果数据库中还没有 randomTopicOrder 才写入
     if (!player.randomTopicOrder || player.randomTopicOrder.length === 0) {
-      if (Array.isArray(req.body.randomTopicOrder)) {
-        player.randomTopicOrder = req.body.randomTopicOrder;
+      const order = req.body.randomTopicOrder;
+
+      if (Array.isArray(order)) {
+        player.randomTopicOrder = order;
+
+        // 映射为中文标签并保存
+        const topicMap = ['文化', '科技', '经济', '社会'];
+        const labelString = order.map(i => topicMap[i]).join(',');
+        
+        player.randomTopicOrderLabel = labelString;
+
         await player.save();
-        console.log("Saved randomTopicOrder to MongoDB:", req.body.randomTopicOrder);
+        console.log("Saved randomTopicOrder to MongoDB:", order);
+        console.log('Saved randomTopicOrder and label:', labelString);
       } else {
         console.warn("Invalid randomTopicOrder format");
       }

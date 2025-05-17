@@ -22,6 +22,9 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL)

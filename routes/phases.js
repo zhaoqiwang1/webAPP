@@ -54,6 +54,35 @@ router.get('/phase1', async (req, res) => {
 //   })
 // })
 
+
+// Save topic random order from frontend
+router.post('/save-topic-order', async (req, res) => {
+  console.log('Received req.body:', req.body);
+  try {
+    const playerId = req.session.playerId;
+    const player = await Player.findById(playerId);
+    if (!player) {
+      return res.status(404).send('Player not found');
+    }
+
+    // 如果数据库中还没有 randomTopicOrder 才写入
+    if (!player.randomTopicOrder || player.randomTopicOrder.length === 0) {
+      if (Array.isArray(req.body.randomTopicOrder)) {
+        player.randomTopicOrder = req.body.randomTopicOrder;
+        await player.save();
+        console.log("Saved randomTopicOrder to MongoDB:", req.body.randomTopicOrder);
+      } else {
+        console.warn("Invalid randomTopicOrder format");
+      }
+    }
+
+    res.sendStatus(200);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Failed to save topic order');
+    }
+});
+
 // Phase1 Collect Answers Route
 router.post('/phase1', async (req, res) => {
   try {

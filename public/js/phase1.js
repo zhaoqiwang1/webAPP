@@ -13,6 +13,7 @@ const topicOrder = [0, 1, 2, 3];
 // 尝试从 localStorage 读取已有值
 let randomTopicOrder = JSON.parse(localStorage.getItem('randomTopicOrder'));
 let proConOrder = JSON.parse(localStorage.getItem('proConOrder'));
+console.log('hello');
 // 如果没有已有值，则生成并存储
 if (!randomTopicOrder || !proConOrder) {
   randomTopicOrder = [...topicOrder].sort(() => Math.random() - 0.5);
@@ -21,6 +22,28 @@ if (!randomTopicOrder || !proConOrder) {
   localStorage.setItem('randomTopicOrder', JSON.stringify(randomTopicOrder));
   localStorage.setItem('proConOrder', JSON.stringify(proConOrder));
 }
+
+console.log('About to send topic order to backend:', randomTopicOrder);
+// 把顺序传给后端
+fetch('/phases/save-topic-order', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  credentials: 'include',
+  body: JSON.stringify({
+    randomTopicOrder
+  })
+}).then(response => {
+  if (!response.ok) throw new Error('Failed to save');
+  console.log('Successfully saved randomTopicOrder to server');
+})
+.catch(error => {
+  console.error('Failed to save topic order to server', error);
+});
+
+
+
 // #endregion
 
 // #region 为每个话题的正面和负面介绍进行展现:

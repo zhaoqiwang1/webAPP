@@ -1,23 +1,29 @@
 import { topicsTitle, topicsContent} from "./topicContents.js";
 
-// #region 对四个话题进行整体随机处理:
+// #region 对四个话题进行整体随机处理以及正面和负面的介绍的随机处理:
+
+// const topicOrder = [0, 1, 2, 3];
+// export const randomTopicOrder = [...topicOrder].sort(() => Math.random() - 0.5);
+// export const proConOrder = Array.from({ length: 4 }, () => Math.random() < 0.5 ? 0 : 1);
+// // Store in localStorage to persist across routes
+// localStorage.setItem('randomTopicOrder', JSON.stringify(randomTopicOrder));
+// localStorage.setItem('proConOrder', JSON.stringify(proConOrder));
+
 const topicOrder = [0, 1, 2, 3];
-export const randomTopicOrder = [...topicOrder].sort(() => Math.random() - 0.5);
-// console.log("原话题顺序:", topicOrder);
-// console.log("原话题顺序:", topicOrder[1]);
-console.log("phase1,打乱顺序后的话题顺序:", randomTopicOrder);
-// console.log("打乱顺序后的新顺序:", randomTopicOrder[0]);
+// 尝试从 localStorage 读取已有值
+let randomTopicOrder = JSON.parse(localStorage.getItem('randomTopicOrder'));
+let proConOrder = JSON.parse(localStorage.getItem('proConOrder'));
+// 如果没有已有值，则生成并存储
+if (!randomTopicOrder || !proConOrder) {
+  randomTopicOrder = [...topicOrder].sort(() => Math.random() - 0.5);
+  proConOrder = Array.from({ length: 4 }, () => Math.random() < 0.5 ? 0 : 1);
+
+  localStorage.setItem('randomTopicOrder', JSON.stringify(randomTopicOrder));
+  localStorage.setItem('proConOrder', JSON.stringify(proConOrder));
+}
 // #endregion
 
-
-// #region 为每个话题的正面和负面介绍进行随机处理:
-export const proConOrder = Array.from({ length: 4 }, () => Math.random() < 0.5 ? 0 : 1);
-console.log("phase1,正面负面信息新顺序:", proConOrder);
-
-// Store in localStorage to persist across routes
-localStorage.setItem('randomTopicOrder', JSON.stringify(randomTopicOrder));
-localStorage.setItem('proConOrder', JSON.stringify(proConOrder));
-
+// #region 为每个话题的正面和负面介绍进行展现:
 let topic1ProCon1st, topic1ProCon2nd, topic2ProCon1st, topic2ProCon2nd, topic3ProCon1st, topic3ProCon2nd, topic4ProCon1st, topic4ProCon2nd;
 // 处理第一个随机话题：
 if (proConOrder[0]===0) {

@@ -1,25 +1,24 @@
-<h2>第三阶段 New</h2>
+<div class="phases-container">
 <hr>
-<p>
-  注意：请如实回答所有的问题。
-</p>
-<hr>
-<h3>引入新的偷换概念</h3>
-<br>
+<h1>第三阶段 New</h1>
+<div class="left-align-block">
 <h2>Welcome, <%= player.name %>!</h2>
 <p>你的随机玩家ID是: <%= player.playerId %></p>
 <p>你上一阶段对第一个话题的态度是: <%= player.P1T1Q1 %></p>
 <p>你上一阶段对第二个话题的态度是: <%= player.P1T2Q1 %></p>
 <p>你上一阶段对第三个话题的态度是: <%= player.P1T3Q1 %></p>
 <p>你上一阶段对第四个话题的态度是: <%= player.P1T4Q1 %></p>
-<br>
+</div>
 <!-- 网格容器 -->
 <form action="/phases/phase3_newQ" method="POST">
   <div class="grid-container" id="phase3-newQ-grids">
   </div>
-  <button type="submit" id="phase3-newQSubmitButton">提交并进入下一阶段</button>
+  <div class="left-align-block">
+    <p><strong>注意：请认真对待且如实回答每一个问题。</strong></p>
+    <button type="submit" id="phase3-newQSubmitButton" class="button-link">提交并进入下一阶段</button>
+  </div>
 </form>
-<br>
+</div>
 <script>
   // Attach to global window object
   window.playerData = {

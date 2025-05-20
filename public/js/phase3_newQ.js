@@ -11,23 +11,23 @@ let topics1arg, topics2arg, topics3arg, topics4arg;
   // #region Topic1 :
   if (window.playerData.playerId % 2 === 0 && window.playerData.P1T1Q1 === "support") {
       topics1arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg_F}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg_F}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg}</p>
   `;
   } else if (window.playerData.playerId % 2 === 0 && window.playerData.P1T1Q1 === "oppose") {
       topics1arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T1Q1 === "support") {
       topics1arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T1Q1 === "oppose") {
       topics1arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg_F}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[0]].supportingArg_F}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[0]].opposingArg}</p>
   `;
   }
   // #endregion
@@ -35,23 +35,23 @@ let topics1arg, topics2arg, topics3arg, topics4arg;
   // #region Topic2 :
   if (window.playerData.playerId % 2 === 0 && window.playerData.P1T2Q1 === "support") {
     topics2arg = `
-    <p>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg_F}</p>
-    <p>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg}</p>
+    <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg_F}</p>
+    <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg}</p>
   `;
   } else if (window.playerData.playerId % 2 === 0 && window.playerData.P1T2Q1 === "oppose") {
       topics2arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T2Q1 === "support") {
       topics2arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T2Q1 === "oppose") {
       topics2arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg_F}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[1]].supportingArg_F}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[1]].opposingArg}</p>
   `;
   }
   // #endregion
@@ -59,23 +59,23 @@ let topics1arg, topics2arg, topics3arg, topics4arg;
   // #region Topic3 :
   if (window.playerData.playerId % 2 === 0 && window.playerData.P1T3Q1 === "support") {
     topics3arg = `
-    <p>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg_F}</p>
-    <p>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg}</p>
+    <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg_F}</p>
+    <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg}</p>
   `;
   } else if (window.playerData.playerId % 2 === 0 && window.playerData.P1T3Q1 === "oppose") {
       topics3arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T3Q1 === "support") {
       topics3arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T3Q1 === "oppose") {
       topics3arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg_F}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[2]].supportingArg_F}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[2]].opposingArg}</p>
   `;
   }
   // #endregion
@@ -83,23 +83,23 @@ let topics1arg, topics2arg, topics3arg, topics4arg;
   // #region Topic4 :
   if (window.playerData.playerId % 2 === 0 && window.playerData.P1T4Q1 === "support") {
     topics4arg = `
-    <p>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg_F}</p>
-    <p>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg}</p>
+    <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg_F}</p>
+    <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg}</p>
   `;
   } else if (window.playerData.playerId % 2 === 0 && window.playerData.P1T4Q1 === "oppose") {
       topics4arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T4Q1 === "support") {
       topics4arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg_F}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg_F}</p>
   `;
   } else if (window.playerData.playerId % 2 === 1 && window.playerData.P1T4Q1 === "oppose") {
       topics4arg = `
-      <p>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg_F}</p>
-      <p>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg}</p>
+      <p><strong>观点1：</strong>${topicArguments_phase3New[randomTopicOrder[3]].supportingArg_F}</p>
+      <p><strong>观点2：</strong>${topicArguments_phase3New[randomTopicOrder[3]].opposingArg}</p>
   `;
   }
   // #endregion
@@ -155,170 +155,186 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- 第一个网格项 -->
     <div class="grid-item1">
         <h3>${topicsTitle[randomTopicOrder[0]]}</h3>
-        <p>${topicsContent[randomTopicOrder[0]].TopicIntro}</p>
-        <p>${topic1ProCon1st}</p>
-        <p>${topic1ProCon2nd}</p>
-        <p>下面是对应的支持和反对的意见。</p>
-        <p>${topics1arg}</p>
-        <label>P3T1Q1_New:选择一个arg继续阅读</label><br>
-        <input type="radio" id="P3T1Q1_New-arg1" name="P3T1Q1_New" value="arg1" required>
-        <label for="P3T1Q1_New-arg1">第一个</label>
-        <input type="radio" id="P3T1Q1_New-arg2" name="P3T1Q1_New" value="arg2">
-        <label for="P3T1Q1_New-arg2">第二个</label>
-        <br><br>
-        <p>请给这两个arguments打分</p>
-        <div class="Q2Q3-container">
-          <div>
-            <label for="P3T1Q2_New">Arg1:</label>
-            <select name="P3T1Q2_New" id="P3T1Q2_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <div>
-            <label for="P3T1Q3_New">Arg2:</label>
-            <select name="P3T1Q3_New" id="P3T1Q3_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
+        <div class="left-align-block">
+          ${topicsContent[randomTopicOrder[0]].TopicIntro}
+          ${topic1ProCon1st}
+          ${topic1ProCon2nd}
+          <hr style="border-top: 1px solid #444; margin: 5px 0;"> <!-- 显示横线 -->
+          <p><strong>阅读以下两个观点并回答后续问题。</strong></p>
+          ${topics1arg}
         </div>
-        <br>
-        <button type="button" id="item1Button">Next</button>
+        <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 -->
+          <label>选择一个观点继续阅读</label><br>
+          <input type="radio" id="P3T1Q1_New-arg1" name="P3T1Q1_New" value="arg1" required>
+          <label for="P3T1Q1_New-arg1">观点1</label>
+          <input type="radio" id="P3T1Q1_New-arg2" name="P3T1Q1_New" value="arg2">
+          <label for="P3T1Q1_New-arg2">观点2</label>
+          <br>
+          <p>请给这两个观点打分</p>
+          <div class="Q2Q3-container">
+            <div>
+              <label for="P3T1Q2_New">观点1:</label>
+              <select name="P3T1Q2_New" id="P3T1Q2_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div>
+              <label for="P3T1Q3_New">观点2:</label>
+              <select name="P3T1Q3_New" id="P3T1Q3_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+      </div>
     </div>
     <!-- 第二个网格项 -->
     <div class="grid-item2">
         <h3>${topicsTitle[randomTopicOrder[1]]}</h3>
-        <p>${topicsContent[randomTopicOrder[1]].TopicIntro}</p>
-        <p>${topic2ProCon1st}</p>
-        <p>${topic2ProCon2nd}</p>
-        <p>下面是对应的支持和反对的意见。</p>
-        <p>${topics2arg}</p>
-        <label>P3T2Q1_New:选择一个arg继续阅读</label><br>
-        <input type="radio" id="P3T2Q1_New-arg1" name="P3T2Q1_New" value="arg1" required>
-        <label for="P3T2Q1_New-arg1">第一个</label>
-        <input type="radio" id="P3T2Q1_New-arg2" name="P3T2Q1_New" value="arg2">
-        <label for="P3T2Q1_New-arg2">第二个</label>
-        <br><br>
-        <p>请给这两个arguments打分</p>
-        <div class="Q2Q3-container">
-          <div>
-            <label for="P3T2Q2_New">Arg1:</label>
-            <select name="P3T2Q2_New" id="P3T2Q2_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
+        <div class="left-align-block">
+          ${topicsContent[randomTopicOrder[1]].TopicIntro}
+          ${topic2ProCon1st}
+          ${topic2ProCon2nd}
+          <hr style="border-top: 1px solid #444; margin: 5px 0;"> <!-- 显示横线 -->
+          <p><strong>阅读以下两个观点并回答后续问题。</strong></p>
+          ${topics2arg}
+         </div>
+        <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 -->
+          <label>选择一个观点继续阅读</label><br>
+          <input type="radio" id="P3T2Q1_New-arg1" name="P3T2Q1_New" value="arg1" required>
+          <label for="P3T2Q1_New-arg1">观点1</label>
+          <input type="radio" id="P3T2Q1_New-arg2" name="P3T2Q1_New" value="arg2">
+          <label for="P3T2Q1_New-arg2">观点2</label>
+          <br>
+          <p>请给这两个观点打分</p>
+          <div class="Q2Q3-container">
+            <div>
+              <label for="P3T2Q2_New">观点1:</label>
+              <select name="P3T2Q2_New" id="P3T2Q2_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div>
+              <label for="P3T2Q3_New">观点2:</label>
+              <select name="P3T2Q3_New" id="P3T2Q3_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <label for="P3T2Q3_New">Arg2:</label>
-            <select name="P3T2Q3_New" id="P3T2Q3_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-        </div>
-        <br>
-        <button type="button" id="item2Button">Next</button>
+      </div>
     </div>
     <!-- 第三个网格项 -->
     <div class="grid-item3">
         <h3>${topicsTitle[randomTopicOrder[2]]}</h3>
-        <p>${topicsContent[randomTopicOrder[2]].TopicIntro}</p>
-        <p>${topic3ProCon1st}</p>
-        <p>${topic3ProCon2nd}</p>
-        <p>下面是对应的支持和反对的意见。</p>
-        <p>${topics3arg}</p>
-        <label>P3T3Q1_New:选择一个arg继续阅读</label><br>
-        <input type="radio" id="P3T3Q1_New-arg1" name="P3T3Q1_New" value="arg1" required>
-        <label for="P3T3Q1_New-arg1">第一个</label>
-        <input type="radio" id="P3T3Q1_New-arg2" name="P3T3Q1_New" value="arg2">
-        <label for="P3T3Q1_New-arg2">第二个</label>
-        <br><br>
-        <p>请给这两个arguments打分</p>
-        <div class="Q2Q3-container">
-          <div>
-            <label for="P3T3Q2_New">Arg1:</label>
-            <select name="P3T3Q2_New" id="P3T3Q2_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <div>
-            <label for="P3T3Q3_New">Arg2:</label>
-            <select name="P3T3Q3_New" id="P3T3Q3_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
+        <div class="left-align-block">
+          ${topicsContent[randomTopicOrder[2]].TopicIntro}
+          ${topic3ProCon1st}
+          ${topic3ProCon2nd}
+          <hr style="border-top: 1px solid #444; margin: 5px 0;"> <!-- 显示横线 -->
+          <p><strong>阅读以下两个观点并回答后续问题。</strong></p>
+          ${topics3arg}
         </div>
-        <br>
-        <button type="button" id="item3Button">Next</button>
+        <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 -->
+          <label>选择一个观点继续阅读</label><br>
+          <input type="radio" id="P3T3Q1_New-arg1" name="P3T3Q1_New" value="arg1" required>
+          <label for="P3T3Q1_New-arg1">观点1</label>
+          <input type="radio" id="P3T3Q1_New-arg2" name="P3T3Q1_New" value="arg2">
+          <label for="P3T3Q1_New-arg2">观点2</label>
+          <br>
+          <p>请给这两个观点打分</p>
+          <div class="Q2Q3-container">
+            <div>
+              <label for="P3T3Q2_New">观点1:</label>
+              <select name="P3T3Q2_New" id="P3T3Q2_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div>
+              <label for="P3T3Q3_New">观点2:</label>
+              <select name="P3T3Q3_New" id="P3T3Q3_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+      </div>
     </div>
     <!-- 第四个网格项 -->
     <div class="grid-item4">
         <h3>${topicsTitle[randomTopicOrder[3]]}</h3>
-        <p>${topicsContent[randomTopicOrder[3]].TopicIntro}</p>
-        <p>${topic4ProCon1st}</p>
-        <p>${topic4ProCon2nd}</p>
-        <p>下面是对应的支持和反对的意见。</p>
-        <p>${topics4arg}</p>
-        <label>P3T4Q1_New:选择一个arg继续阅读</label><br>
-        <input type="radio" id="P3T4Q1_New-arg1" name="P3T4Q1_New" value="arg1" required>
-        <label for="P3T4Q1_New-arg1">第一个</label>
-        <input type="radio" id="P3T4Q1_New-arg2" name="P3T4Q1_New" value="arg2">
-        <label for="P3T4Q1_New-arg2">第二个</label>
-        <br><br>
-        <p>请给这两个arguments打分</p>
-        <div class="Q2Q3-container">
-          <div>
-            <label for="P3T4Q2_New">Arg1:</label>
-            <select name="P3T4Q2_New" id="P3T4Q2_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <div>
-            <label for="P3T4Q3_New">Arg2:</label>
-            <select name="P3T4Q3_New" id="P3T4Q3_New" required>
-              <option value="">--</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
+        <div class="left-align-block">
+          ${topicsContent[randomTopicOrder[3]].TopicIntro}
+          ${topic4ProCon1st}
+          ${topic4ProCon2nd}
+          <hr style="border-top: 1px solid #444; margin: 5px 0;"> <!-- 显示横线 -->
+          <p><strong>请阅读以下两个观点，并回答后续问题。</strong></p>
+          ${topics4arg}
         </div>
-        <br>
-        <button type="button" id="item4Button">Next</button>
+        <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 --> 
+          <label>选择一个观点继续阅读</label><br>
+          <input type="radio" id="P3T4Q1_New-arg1" name="P3T4Q1_New" value="arg1" required>
+          <label for="P3T4Q1_New-arg1">观点1</label>
+          <input type="radio" id="P3T4Q1_New-arg2" name="P3T4Q1_New" value="arg2">
+          <label for="P3T4Q1_New-arg2">观点2</label>
+          <br>
+          <p>请给这两个观点打分</p>
+          <div class="Q2Q3-container">
+            <div>
+              <label for="P3T4Q2_New">观点1:</label>
+              <select name="P3T4Q2_New" id="P3T4Q2_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div>
+              <label for="P3T4Q3_New">观点2:</label>
+              <select name="P3T4Q3_New" id="P3T4Q3_New" required>
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+      </div>
     </div>
   `;
 

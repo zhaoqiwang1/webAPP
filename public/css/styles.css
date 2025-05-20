@@ -118,7 +118,7 @@
 /* #region Phase1 Page */
 .left-align-block {
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 2px;
 }
 
 .left-align-block button {
@@ -162,7 +162,7 @@
   display: flex;
   gap: 30px; /* Optional: adds space between the two dropdowns */
   align-items: center;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 /* 让问题部分推到底部 */

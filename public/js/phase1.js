@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ${topic1ProCon2nd}
         </div>
         <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 -->
           <label>${topicsQuestion[randomTopicOrder[0]]}</label><br>
           <input type="radio" id="P1T1Q1-support" name="P1T1Q1" value="support" required>
           <label for="P1T1Q1-support">支持</label>
@@ -110,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ${topic2ProCon2nd}
         </div>
         <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 -->
           <label>${topicsQuestion[randomTopicOrder[1]]}</label><br>
           <input type="radio" id="P1T2Q1-support" name="P1T2Q1" value="support" required>
           <label for="P1T2Q1-support">支持</label>
@@ -126,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ${topic3ProCon2nd}
         </div>
         <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 -->
           <label>${topicsQuestion[randomTopicOrder[2]]}</label><br>
           <input type="radio" id="P1T3Q1-support" name="P1T3Q1" value="support" required>
           <label for="P1T3Q1-support">支持</label>
@@ -142,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ${topic4ProCon2nd}
         </div>
         <div class="question-block">
+          <hr style="border-top: 3px solid #444; margin: 16px 0;"> <!-- 显示横线 -->
           <label>${topicsQuestion[randomTopicOrder[3]]}</label><br>
           <input type="radio" id="P1T4Q1-support" name="P1T4Q1" value="support" required>
           <label for="P1T4Q1-support">支持</label>

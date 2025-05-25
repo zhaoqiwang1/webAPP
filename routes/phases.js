@@ -288,6 +288,9 @@ router.post('/phase3_repQ', async (req, res) => {
     player.P3T3Q3_Rep = req.body.P3T3Q3_Rep;
     player.P3T4Q3_Rep = req.body.P3T4Q3_Rep;
 
+    // Phase3_repQ Attention Check Question:
+    player.P3RepAttentionCheck = req.body.P3RepAttentionCheck;
+
     player.phase3RepQSubmitted = true; // lock submission
 
     await player.save();

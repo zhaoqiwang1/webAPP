@@ -197,6 +197,13 @@ const playerSchema = new mongoose.Schema({
     default: null
   },
 
+  // Phase 3 Rep Attention Check Question.
+  P3RepAttentionCheck: {
+    type: String,
+    enum: ['left', 'right'],
+    default: null
+  },
+
   // phase3_newQ Q1 (pick one to read):
   P3T1Q1_New: {
     type: String,

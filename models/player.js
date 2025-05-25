@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
-
+const mongoose = require('mongoose');
+const fs = require('fs');
+const path = require('path');
 
 const playerSchema = new mongoose.Schema({
   // player name:
@@ -17,6 +18,13 @@ const playerSchema = new mongoose.Schema({
       message: '{VALUE} is not an integer value'
     }
   },
+  // 记录这个玩家是参加的“实验组”还是“对照组”。
+  group: {
+    type: String,
+    enum: ['实验组', '对照组'],
+    required: true,
+  },
+
   // random Topic Number and their labels:
   randomTopicOrder: {
     type: [Number],
@@ -160,27 +168,27 @@ const playerSchema = new mongoose.Schema({
     default: null
   },
 
-    // phase3_Rep Q3 (evaluation of arg2):
-    P3T1Q3_Rep: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
-    P3T2Q3_Rep: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
-    P3T3Q3_Rep: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
-    P3T4Q3_Rep: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
+  // phase3_Rep Q3 (evaluation of arg2):
+  P3T1Q3_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T2Q3_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T3Q3_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T4Q3_Rep: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
 
   // phase3_newQ Q1 (pick one to read):
   P3T1Q1_New: {
@@ -226,27 +234,27 @@ const playerSchema = new mongoose.Schema({
     default: null
   },
 
-    // phase3_New Q3 (evaluation of arg2):
-    P3T1Q3_New: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
-    P3T2Q3_New: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
-    P3T3Q3_New: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
-    P3T4Q3_New: {
-      type: String,
-      enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
-      default: null
-    },
+  // phase3_New Q3 (evaluation of arg2):
+  P3T1Q3_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T2Q3_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T3Q3_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
+  P3T4Q3_New: {
+    type: String,
+    enum: ['1', '2', '3', '4', '5'], // 5 dropdown options
+    default: null
+  },
 
   // created time for data:
   createdAt: {
@@ -254,12 +262,30 @@ const playerSchema = new mongoose.Schema({
     default: () => new Date(Date.now() + 8 * 60 * 60 * 1000)
   },
   
-    // Submission locks
-    phase1Submitted: { type: Boolean, default: false },
-    phase2Submitted: { type: Boolean, default: false },
-    phase3RepQSubmitted: { type: Boolean, default: false },
-    phase3NewQSubmitted: { type: Boolean, default: false },
+  // Submission locks
+  phase1Submitted: { type: Boolean, default: false },
+  phase2Submitted: { type: Boolean, default: false },
+  phase3RepQSubmitted: { type: Boolean, default: false },
+  phase3NewQSubmitted: { type: Boolean, default: false },
 
 })
+
+// 保存前从 config.txt 获取当前实验分组
+playerSchema.pre('validate', function (next) {
+  const player = this;
+  const configPath = path.join(__dirname, '../public/treatment/config.txt');
+
+  try {
+    const content = fs.readFileSync(configPath, 'utf8').trim(); // 去掉多余空格换行
+    if (content !== '实验组' && content !== '对照组') {
+      throw new Error('config.txt 内容必须是“实验组”或“对照组”');
+    }
+
+    player.group = content;
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = mongoose.model('Player', playerSchema, 'postedAnswers')

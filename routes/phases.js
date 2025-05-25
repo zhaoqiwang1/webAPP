@@ -194,6 +194,8 @@ router.post('/phase2', async (req, res) => {
     player.P2T2Q3 = req.body.P2T2Q3;
     player.P2T3Q3 = req.body.P2T3Q3;
     player.P2T4Q3 = req.body.P2T4Q3;
+    // Phase2 Attention Check Question:
+    player.P2AttentionCheck = req.body.P2AttentionCheck;
 
     player.phase2Submitted = true; // lock submission
 

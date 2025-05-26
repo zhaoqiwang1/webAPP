@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <input type="radio" id="P2T1Q1-arg2" name="P2T1Q1" value="arg2">
           <label for="P2T1Q1-arg2">观点2</label>
           <br>
-          <p>请给这两个观点打分</p>
+          <p>请给这两个观点的内容质量打分</p>
           <div class="Q2Q3-container">
             <div>
               <label for="P2T1Q2">观点1:</label>
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <input type="radio" id="P2T2Q1-arg2" name="P2T2Q1" value="arg2">
           <label for="P2T2Q1-arg2">观点2</label>
           <br>
-          <p>请给这两个观点打分</p>
+          <p>请给这两个观点的内容质量打分</p>
           <div class="Q2Q3-container">
             <div>
               <label for="P2T2Q2">观点1:</label>
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <input type="radio" id="P2T3Q1-arg2" name="P2T3Q1" value="arg2">
           <label for="P2T3Q1-arg2">观点2</label>
           <br>
-          <p>请给这两个观点打分</p>
+          <p>请给这两个观点的内容质量打分</p>
           <div class="Q2Q3-container">
             <div>
               <label for="P2T3Q2">观点1:</label>
@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <input type="radio" id="P2T4Q1-arg2" name="P2T4Q1" value="arg2">
           <label for="P2T4Q1-arg2">观点2</label>
           <br>
-          <p>请给这两个观点打分</p>
+          <p>请给这两个观点的内容质量打分</p>
           <div class="Q2Q3-container">
             <div>
               <label for="P2T4Q2">观点1:</label>
